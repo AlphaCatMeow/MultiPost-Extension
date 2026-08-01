@@ -51,7 +51,7 @@ export const trustDomainMessageHandler = (request, sender, sendResponse) => {
         const isTrusted = trustedDomains.some(({ domain }) => {
           if (domain.startsWith("*.")) {
             const wildCardDomain = domain.slice(2);
-            return hostname.endsWith(wildCardDomain);
+            return hostname === wildCardDomain || hostname.endsWith(`.${wildCardDomain}`);
           }
           return hostname === domain;
         });
