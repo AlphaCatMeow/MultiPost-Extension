@@ -3,6 +3,7 @@ import { ArticleAliyun } from "./article/aliyun";
 import { ArticleAutohome } from "./article/autohome";
 import { ArticleBaijiahao } from "./article/baijiahao";
 import { ArticleBilibili } from "./article/bilibili";
+import { ArticleCnblogs } from "./article/cnblogs";
 import { ArticleCSDN } from "./article/csdn";
 import { ArticleDaYuHao } from "./article/dayuhao";
 import { ArticleDingduanhao } from "./article/dingduanhao";
@@ -42,6 +43,17 @@ import { ArticleZsxq } from "./article/zsxq";
 import type { PlatformInfo } from "./common";
 
 export const ArticleInfoMap: Record<string, PlatformInfo> = {
+  ARTICLE_CNBLOGS: {
+    type: "ARTICLE",
+    name: "ARTICLE_CNBLOGS",
+    homeUrl: "https://i.cnblogs.com/articles/edit",
+    faviconUrl: "https://common.cnblogs.com/favicon.ico",
+    platformName: "博客园",
+    injectUrl: "https://i.cnblogs.com/articles/edit",
+    injectFunction: ArticleCnblogs,
+    tags: ["CN"],
+    accountKey: "cnblogs",
+  },
   ARTICLE_CSDN: {
     type: "ARTICLE",
     name: "ARTICLE_CSDN",

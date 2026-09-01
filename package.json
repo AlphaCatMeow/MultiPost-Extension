@@ -1,7 +1,7 @@
 {
   "name": "__MSG_extensionName__",
   "displayName": "__MSG_extensionDisplayName__",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "__MSG_extensionDescription__",
   "author": "leaperone",
   "scripts": {
@@ -70,8 +70,11 @@
   },
   "manifest": {
     "default_locale": "zh_CN",
-    "host_permissions": ["https://*/*", "http://mp.163.com/*", "http://127.0.0.1/*", "http://localhost/*"],
-    "permissions": ["activeTab", "tabs", "background", "scripting", "tabGroups", "sidePanel"],
+    "externally_connectable": {
+      "matches": ["https://paiban.md/*", "http://localhost:2663/*"]
+    },
+    "host_permissions": ["https://*/*"],
+    "permissions": ["activeTab", "tabs", "scripting", "tabGroups", "sidePanel", "clipboardWrite", "clipboardRead"],
     "web_accessible_resources": [
       {
         "resources": ["assets/icon.png"],
